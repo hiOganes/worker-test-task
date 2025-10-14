@@ -1,4 +1,4 @@
-# HR Worker Management System
+# WorkerAPI
 
 Система управления работниками для HR-отдела с REST API, импортом Excel, Django Admin, пагинацией, фильтрацией и тестами.
 
