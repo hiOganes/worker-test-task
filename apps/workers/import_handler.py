@@ -3,6 +3,7 @@ from django.core.exceptions import ValidationError
 from django.core.validators import validate_email
 from .models import Worker
 
+
 def import_workers_from_excel(file, user):
     wb = openpyxl.load_workbook(file)
     ws = wb.active
@@ -28,7 +29,6 @@ def import_workers_from_excel(file, user):
             )
             worker.full_clean()
             worker.save()
-            print(f"Worker {worker} imported by {user}")
             added += 1
         except Exception as e:
             errors.append({"row": row_num, "error": str(e)})

@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from .models import Worker
 
+
 class WorkerListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Worker
